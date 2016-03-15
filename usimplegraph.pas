@@ -2967,8 +2967,11 @@ begin
       end;
     end;
 
-    if GetScrollPos(Owner.Handle, Code) <> FPosition then
-      SetScrollPos(Owner.Handle, Code, FPosition, True);
+    if Owner.HandleAllocated then
+      begin
+        if GetScrollPos(Owner.Handle, Code) <> FPosition then
+          SetScrollPos(Owner.Handle, Code, FPosition, True);
+      end;
   end;
 end;
 
