@@ -4536,7 +4536,7 @@ begin
           fDragSourcePt.Y := Y;
         end;
     end
-    else
+    else if (not Assigned(ObjectAtCursor)) then
       Screen.Cursor := crHandFlat;
   end
   else if ValidMarkedArea then
