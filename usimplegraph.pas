@@ -203,6 +203,7 @@ type
 
   TEvsGraphObjectListEvent = procedure(Sender: TObject; GraphObject: TEvsGraphObject;
     Action: TEvsGraphObjectListAction) of object;
+  TEvsCalcTextEvent = function (Sender: TObject; Canvas: TCanvas; const Text: string; const Rect: TRect): string of object;
 
   TListEnumState = record
     Current : integer;
@@ -1217,6 +1218,7 @@ type
   private
     FCustomCanvas         : TCanvasClass;
     fHorzScrollBar        : TEvsGraphScrollBar;
+    fOnCalcText: TEvsCalcTextEvent;
     fVertScrollBar        : TEvsGraphScrollBar;
     fZoom                 : TZoom;
     FZoomFactor           : Double;
@@ -1544,6 +1546,7 @@ type
     property CursorPos: TPoint read GetCursorPos write SetCursorPos;
     property DefaultNodeClass: TEvsGraphNodeClass read fDefaultNodeClass write fDefaultNodeClass;
     property DefaultLinkClass: TEvsGraphLinkClass read fDefaultLinkClass write fDefaultLinkClass;
+    property OnCalcText : TEvsCalcTextEvent read fOnCalcText write FOnCalcText;
   published
     property HorzScrollBar: TEvsGraphScrollBar read fHorzScrollBar write SetHorzScrollBar;
     property VertScrollBar: TEvsGraphScrollBar read fVertScrollBar write SetVertScrollBar;
@@ -3621,7 +3624,7 @@ begin
   end;
 end;
 
-procedure TEvsSimpleGraph.CopyToClipboard(aSelection: boolean);
+procedure TEvsSimpleGraph.CopyToClipboard(aSelection: Boolean);
 var
   vObjectList: TEvsGraphObjectList;
   vStream : TMemoryStream;
@@ -4352,7 +4355,7 @@ begin
   end;
 end;
 
-procedure TEvsSimpleGraph.DrawEditStates(ACanvas: TCanvas);
+procedure TEvsSimpleGraph.DrawEditStates(aCanvas: TCanvas);
 var
   I: integer;
   vR : TRect;
@@ -4805,13 +4808,13 @@ begin
     fOnZoomChange(Self);
 end;
 
-procedure TEvsSimpleGraph.DoBeforeDraw(ACanvas: TCanvas);
+procedure TEvsSimpleGraph.DoBeforeDraw(aCanvas: TCanvas);
 begin
   if Assigned(OnBeforeDraw) then
     OnBeforeDraw(Self, Canvas);
 end;
 
-procedure TEvsSimpleGraph.DoAfterDraw(ACanvas: TCanvas);
+procedure TEvsSimpleGraph.DoAfterDraw(aCanvas: TCanvas);
 begin
   if Assigned(OnAfterDraw) then
     OnAfterDraw(Self, Canvas);
@@ -5357,7 +5360,7 @@ begin
     PerformInvalidate(@ScreenRect);
 end;
 
-procedure TEvsSimpleGraph.DrawTo(ACanvas: TCanvas);
+procedure TEvsSimpleGraph.DrawTo(aCanvas: TCanvas);
 begin
   DrawObjects(Canvas, Objects);
 end;
@@ -8953,7 +8956,10 @@ begin
         vCanvas.Font := Font;
         vSize := vCanvas.TextExtent(vTmpText);
         vTextRect.Bottom := vSize.cy;
-        vTmpText := MinimizeText(vCanvas, vTmpText, vTextRect);
+        if Assigned(Owner.OnCalcText) then
+          vTmpText:=owner.OnCalcText(Owner ,vCanvas, vTmpText, vTextRect)
+        else
+          vTmpText := MinimizeText(vCanvas, vTmpText, vTextRect);
       finally
         vCanvas.Free;
       end;
@@ -9848,7 +9854,10 @@ begin
     vCanvas := TEvsCompatibleCanvas.Create;
     try
       vCanvas.Font := Font;
-      TextToShow := MinimizeText(vCanvas, Text, vMaxTextRect);                    //Internal helper
+      if Assigned(Owner.OnCalcText) then
+        TextToShow:=owner.OnCalcText(Owner, vCanvas, Text, vMaxTextRect)
+      else
+        TextToShow := MinimizeText(vCanvas, Text, vMaxTextRect);                    //Internal helper
       Rect := vMaxTextRect;
       LCLIntf.DrawText(vCanvas.Handle, PChar(TextToShow), Length(TextToShow),  //calculate the text's rectangle required for painting.
         Rect, Owner.DrawTextBiDiModeFlags(DrawTextFlags));
