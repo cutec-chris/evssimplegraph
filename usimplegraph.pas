@@ -1433,8 +1433,6 @@ type
     function ZoomObject(aGraphObject: TEvsGraphObject): boolean;                               //CLEAN
     function ZoomSelection: boolean;                                                       //CLEAN
     function ZoomGraph: boolean;                                                           //CLEAN
-    function ChangeZoom(aNewZoom: integer; aOrigin: TEvsGraphZoomOrigin): boolean;              //CLEAN
-    function ChangeZoomBy(aDelta: integer; aOrigin: TEvsGraphZoomOrigin): boolean;              //CLEAN
   protected
     property CanvasRecall: TEvsCanvasRecall read fCanvasRecall;
     property DragHitTest: DWORD read fDragHitTest write fDragHitTest;
@@ -1443,7 +1441,6 @@ type
     property DragTargetPt: TPoint read fDragTargetPt write fDragTargetPt;
     property MarkedArea: TRect read fMarkedArea write SetMarkedArea;
     property ValidMarkedArea: boolean read fValidMarkedArea;
-    property Zoom: TZoom read fZoom write SetZoom default 100;
     property Printing : Boolean read fPrinting;
     procedure OffsetObjects(const aList:TEvsGraphObjectList; aDX, aDY:Integer);
 
@@ -1494,7 +1491,9 @@ type
       aLinkClass: TEvsGraphLinkClass = nil): TEvsGraphLink; overload;
     function InsertLink(const aPts: array of TPoint;                                        //CLEAN
       aLinkClass: TEvsGraphLinkClass = nil): TEvsGraphLink; overload;
-    // zoom moved to protected
+    property Zoom: TZoom read fZoom write SetZoom default 100;
+    function ChangeZoom(aNewZoom: integer; aOrigin: TEvsGraphZoomOrigin): boolean;              //CLEAN
+    function ChangeZoomBy(aDelta: integer; aOrigin: TEvsGraphZoomOrigin): boolean;              //CLEAN
     function AlignSelection(aHorz: TEvsHAlignOption; aVert: TEvsVAlignOption): boolean;  virtual;  //CLEAN
     function ResizeSelection(aHorz: TEvsResizeOption; aVert: TEvsResizeOption): boolean; virtual;  //CLEAN
     function ForEachObject(aCallback: TEvsGraphForEachMethod; aUserData: integer;               //CLEAN
@@ -10289,6 +10288,7 @@ var
   VBrush : TBrush;
 begin
   Tmp := Copy(Vertices,0,Length(Vertices));
+
   vPen := aCanvas.Pen;
   VBrush := aCanvas.Brush;
   aCanvas.Polygon(Tmp);
