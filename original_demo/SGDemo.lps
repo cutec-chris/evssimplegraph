@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
@@ -8,9 +8,6 @@
       <Unit0>
         <Filename Value="SGDemo.lpr"/>
         <IsPartOfProject Value="True"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -20,11 +17,8 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Main"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="874"/>
-        <CursorPos X="15" Y="895"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="22" Y="22"/>
         <UsageCount Value="106"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -34,9 +28,6 @@
         <Filename Value="DesignProp.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <UnitName Value="DesignProp"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="23" Y="75"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -45,9 +36,6 @@
         <Filename Value="ObjectProp.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <UnitName Value="ObjectProp"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="61" Y="145"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -56,8 +44,6 @@
         <Filename Value="LinkProp.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <UnitName Value="LinkProp"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="29" Y="150"/>
         <UsageCount Value="106"/>
@@ -69,9 +55,7 @@
         <ComponentName Value="NodeProperties"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="NodeProp"/>
         <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="19" Y="72"/>
         <UsageCount Value="106"/>
@@ -85,9 +69,6 @@
         <ComponentName Value="About"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="AboutDelphiArea"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="30" Y="5"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -98,10 +79,6 @@
         <ComponentName Value="HelpOnActions"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="UsageHelp"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
@@ -109,10 +86,6 @@
         <Filename Value="MarginsProp.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <UnitName Value="MarginsProp"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
@@ -120,9 +93,6 @@
         <Filename Value="AlignDlg.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <UnitName Value="AlignDlg"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="8" Y="35"/>
         <UsageCount Value="106"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -130,43 +100,38 @@
       <Unit10>
         <Filename Value="SizeDlg.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="SizeDialog"/>
         <HasResources Value="True"/>
-        <UnitName Value="SizeDlg"/>
-        <IsVisibleTab Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="27" Y="23"/>
         <UsageCount Value="106"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
         <Filename Value="..\uevssimplegraph.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UEvsSimpleGraph"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="11008"/>
         <CursorPos X="17" Y="11016"/>
         <FoldState Value=" TL00{R TJkQ2o9"/>
         <UsageCount Value="106"/>
         <Bookmarks Count="1">
-          <Item0 X="1" Y="3590" ID="0"/>
+          <Item0 Y="3590"/>
         </Bookmarks>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit11>
       <Unit12>
         <Filename Value="Main.lfm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="38"/>
+        <CursorPos Y="38"/>
         <UsageCount Value="1"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus.1.0\components\printers\printersdlgs.pp"/>
         <UnitName Value="PrintersDlgs"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="32"/>
         <CursorPos X="3" Y="49"/>
         <UsageCount Value="1"/>
@@ -174,14 +139,12 @@
       <Unit14>
         <Filename Value="C:\lazarus.1.0\lcl\clipbrd.pp"/>
         <UnitName Value="Clipbrd"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="196"/>
         <CursorPos X="61" Y="217"/>
         <UsageCount Value="5"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus.1.0\lcl\include\clipbrd.inc"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="94"/>
         <CursorPos X="30" Y="118"/>
         <UsageCount Value="5"/>
@@ -189,7 +152,6 @@
       <Unit16>
         <Filename Value="C:\lazarus.1.0\lcl\menus.pp"/>
         <UnitName Value="Menus"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="441"/>
         <CursorPos X="3" Y="458"/>
         <UsageCount Value="4"/>
@@ -197,7 +159,6 @@
       <Unit17>
         <Filename Value="C:\development\lazarus\lcl\menus.pp"/>
         <UnitName Value="Menus"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="435"/>
         <CursorPos X="3" Y="451"/>
         <UsageCount Value="4"/>
@@ -205,34 +166,26 @@
       <Unit18>
         <Filename Value="..\clipbrd.pp"/>
         <UnitName Value="Clipbrd"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="175"/>
-        <CursorPos X="1" Y="129"/>
+        <CursorPos Y="129"/>
         <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit18>
       <Unit19>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\lclext.pas"/>
         <UnitName Value="LclExt"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <FoldState Value=" TL20U#"/>
         <UsageCount Value="4"/>
       </Unit19>
       <Unit20>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\oleutils.pas"/>
-        <UnitName Value="oleutils"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="39"/>
-        <CursorPos X="1" Y="1"/>
         <FoldState Value=" TL20T1"/>
         <UsageCount Value="4"/>
       </Unit20>
       <Unit21>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\delphicompat.pas"/>
         <UnitName Value="DelphiCompat"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="98"/>
         <CursorPos X="10" Y="115"/>
         <FoldState Value=" TL20U#"/>
@@ -240,7 +193,6 @@
       </Unit21>
       <Unit22>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\include\qt\delphicompat.inc"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="144"/>
         <CursorPos X="3" Y="150"/>
         <UsageCount Value="4"/>
@@ -248,7 +200,6 @@
       </Unit22>
       <Unit23>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\include\gtk2\delphicompat.inc"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="154"/>
         <CursorPos X="3" Y="168"/>
         <UsageCount Value="4"/>
@@ -256,16 +207,12 @@
       </Unit23>
       <Unit24>
         <Filename Value="C:\lazarus.1.1\components\LCLExtensions\include\generic\stubs.inc"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="124"/>
         <CursorPos X="3" Y="127"/>
         <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit24>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="Main.pas"/>
@@ -305,7 +252,7 @@
       </Position9>
       <Position10>
         <Filename Value="Main.pas"/>
-        <Caret Line="1057" Column="1" TopLine="1040"/>
+        <Caret Line="1057" TopLine="1040"/>
       </Position10>
       <Position11>
         <Filename Value="Main.pas"/>
