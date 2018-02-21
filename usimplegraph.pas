@@ -246,7 +246,7 @@ type
 
   TEvsGraphDependencyChangeFlag = (gdcChanged, gdcRemoved);
 
-  TEvsGraphObjectOption = (goLinkable, goSelectable, goShowCaption);
+  TEvsGraphObjectOption = (goLinkable, goSelectable, goShowCaption, goLocked);
   TEvsGraphObjectOptions = set of TEvsGraphObjectOption;
 
   TEvsGraphLinkOption = (gloFixedStartPoint, gloFixedEndPoint, gloFixedBreakPoints,
